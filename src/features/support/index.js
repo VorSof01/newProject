@@ -1,0 +1,1 @@
+export { default as SupportFeatures } from './SupportFeatures.vue'

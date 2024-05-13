@@ -1,0 +1,1 @@
+export { default as LoginPass } from './LoginPass.vue'

@@ -1,0 +1,1 @@
+export { default as HeaderStand } from './HeaderStand.vue'

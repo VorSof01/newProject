@@ -1,0 +1,1 @@
+export { default as BlockWhite } from './BlockWhite.vue'

@@ -1,0 +1,1 @@
+export { default as ShiftsCreat } from './ShiftsCreat.vue'

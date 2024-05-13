@@ -1,0 +1,1 @@
+export { default as ChangePassModel } from './ChangePassModel.vue'
