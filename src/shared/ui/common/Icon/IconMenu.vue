@@ -35,7 +35,5 @@
 </script>
 
 <style scoped>
-svg {
-  width: 24px;
-  height: 24px;}
+svg{}
 </style>

@@ -5,18 +5,18 @@ import {IconAvatar} from "~/src/shared/ui/common";
 </script>
 
 <template>
-  <div class="flex-col bg-white w-full ">
+  <header class="flex-col bg-white w-full ">
     <div class="flex min-h-full flex-col justify-center z-50">
       <div class="sm:mx-auto sm:w-full sm:max-w-sm py-4 px-5">
         <div class="flex justify-between pb-4">
           <LogoSmall/>
           <div class="flex justify-between padding-top-20">
-            <img src="../../../public/icons/lamp.svg" alt="" class="lamp ">
+            <img src="/icons/lamp.svg" alt="" class="lamp ">
             <p class="text-instr pl-2">Инструкция</p>
           </div>
         </div>
         <div class="flex row">
-          <icon-avatar fill="#DADFEA" stroke="#DADFEA" width="20" height="20"/>
+          <icon-avatar color="#DADFEA" width="20" height="20"/>
           <p class="text-name pl-2">Иванов И.И.</p>
           <p class="text-stand pl-2">Производство</p>
         </div>
@@ -26,7 +26,7 @@ import {IconAvatar} from "~/src/shared/ui/common";
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 <style scoped>
 .lamp {

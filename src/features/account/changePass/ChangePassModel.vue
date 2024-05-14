@@ -23,7 +23,7 @@
         </v-button-icon>
       </div>
     </div>
-    <div class="mt-2 input-wrap">
+    <div class="input-wrap">
       <v-input
           v-model="formData.new_password"
           id="passw"
@@ -41,7 +41,7 @@
         <span v-else><img src="../../../../public/icons/closeEye.svg" alt=""></span>
       </v-button-icon>
     </div>
-    <div class="mt-2 input-wrap">
+    <div class="input-wrap">
       <v-input
           v-model="formData.new_password_confirmation"
           id="passwRepeat"
@@ -55,8 +55,8 @@
       <span v-show="differentPass" class="error">Пароли не совпадают</span>
       <span v-show="isEmptyConfirmPass" class="error">Поле должно быть заполнено</span>
       <v-button-icon id="pass-icon3" class="password_btn js-btn-password" @click="isPasswordShowConf = !isPasswordShowConf">
-        <span v-if="isPasswordShowConf"><img src="../../../../public/icons/openEye.svg" alt=""></span>
-        <span v-else><img src="../../../../public/icons/closeEye.svg" alt=""></span>
+        <span v-if="isPasswordShowConf"><img src="public/icons/openEye.svg" alt=""></span>
+        <span v-else><img src="public/icons/closeEye.svg" alt=""></span>
       </v-button-icon>
     </div>
     <v-button
@@ -133,7 +133,8 @@ const saveNewPass = async () => {
 .input-wrap {
   @apply mt-2;
   position: relative;
-
+    margin-top: 16px;
+    margin-bottom: 16px;
   .password_btn {
     position: absolute;
     top: 17px;

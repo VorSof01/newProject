@@ -2,14 +2,12 @@
   <Transition name="modal" :id="props.id">
     <div v-if="show" class="modal-mask">
       <div class="modal-container">
-        <div class="modal-footer">
-          <div class="footer">
+          <div>
             <button
                 class="modal-default-button mx-[250px] my-[-30px]"
-                @click="$emit('close')"
+                @click="onClose"
             ><IconCross/></button>
           </div>
-        </div>
           <slot/>
       </div>
     </div>
@@ -19,6 +17,13 @@
 
 <script setup lang="ts">
 import {IconCross} from "~/src/shared/ui/common";
+
+const emits = defineEmits(['close'])
+
+const onClose = () => {
+  emits('close')
+}
+
 
 const props = defineProps({
   show: Boolean,

@@ -1,29 +1,20 @@
 <template>
   <div class="w-full">
-    <div v-if="!isCreat">
       <div class="text-1  mb-[16px]">
         Смены
       </div>
       <div>
         У вас пока нет созданных смен
       </div>
-      <div class="mt-[250px]">
-        <v-button type="submit" @click="isCreat = !isCreat">
+      <div class="mt-[250px] flex w-full justify-center rounded-md px-[36px] py-[18px] text-[14px] font-semibold leading-6 text-white bg-[#434FBA] hover:bg-[#363F95] focus-visible:outline focus-visible:outline-0 focus-visible:outline-offset-2 focus-visible:outline-[#434FBA] border-radius: 8px;">
+        <nuxt-link to="/createShift">
           Сформировать смену
-        </v-button>
+        </nuxt-link>
       </div>
     </div>
-    <div v-else>
-      <shifts-creat/>
-    </div>
-  </div>
 </template>
 
 <script setup lang="ts">
-import {VButton} from "~/src/shared/ui/common";
-import {ShiftsCreat} from "~/src/features/shifts/createShifts";
-
-const isCreat = ref(false)
 </script>
 
 <style scoped>

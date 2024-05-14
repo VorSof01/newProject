@@ -8,7 +8,7 @@
         <p>Ваш старый email</p>
         <p class="font-semibold leading-6">master@lave.tech</p>
       </div>
-      <div class="mt-2">
+      <div class="margin">
         <v-input
             v-model="formData.subject"
             id="login"
@@ -147,5 +147,9 @@ const changeEmail = async () => {
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
+}
+.margin {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 </style>

@@ -8,7 +8,7 @@
         <p>Ваш старый номер</p>
         <p class="font-semibold leading-6">+7 (999) 000-09-09</p>
       </div>
-      <div class="mt-2">
+      <div class="margin">
         <v-input
             v-model="formData1.subject"
             id="login"
@@ -144,5 +144,9 @@ const changePhone = async () => {
   line-height: 18px;
   letter-spacing: 0.2px;
   margin-top: 8px;
+}
+.margin {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 </style>

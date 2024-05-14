@@ -6,7 +6,7 @@
       </ul>
     </div>
     <div id="active-tab">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>

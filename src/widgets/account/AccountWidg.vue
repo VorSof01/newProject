@@ -38,7 +38,7 @@
     </Teleport>
 
     <div class="flex justify-between">
-      <div><v-switch v-model="formData.email_notification" label="1" @click="submitForm"/></div>
+      <div><v-switch v-model="formData.email_notification" @click="submitForm"/></div>
       <div class="text-[14px] mr-[50px]">Рассылка уведомлений на почту</div>
     </div>
   </div>
@@ -48,10 +48,11 @@
 import VModal from "~/src/shared/ui/common/Modal/VModal.vue";
 import {IconArrowSmall} from "~/src/shared/ui/common";
 import VSwitch from "~/src/shared/ui/common/Switch/VSwitch.vue";
-import {BlockWhite} from "~/src/widgets/blockWhite/index.js";
+import {BlockWhite} from "~/src/shared/ui/common/blockWhite/index.js";
 import {ChangePhoneModel} from "~/src/features/account/changePhone/index.js";
 import {ChangeEmailModel} from "~/src/features/account/changeEmail/index.js";
 import {ChangePassModel} from "~/src/features/account/changePass/index.js";
+import {useCookie} from "#app";
 
 const showModal = ref(false)
 const showModal1 = ref(false)
@@ -60,11 +61,15 @@ const showModal2 = ref(false)
 const formData = ref({
   email_notification: ''
 })
+const token = useCookie('token')
 const { data: responseData, execute: responseExecute } = await useFetch('/api/profile/change/notification', {
   method: 'patch',
   immediate: false,
   watch: false,
-  body: formData
+  body: formData,
+  headers: {
+    Authorization: `Bearer ${token.value}`
+  }
 })
 
 const submitForm = async () => {

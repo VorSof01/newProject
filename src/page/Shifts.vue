@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import InfoShifts from "~/src/features/shifts/infoShifts/InfoShifts.vue";
+import InfoShifts from "~/src/widgets/shifts/infoShifts/InfoShifts.vue";
 </script>
 
 <style scoped>

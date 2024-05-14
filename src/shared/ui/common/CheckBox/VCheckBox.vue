@@ -1,23 +1,22 @@
 <template>
   <div class="flex items-center mb-4">
+    <label :for="props.id">
     <input
-        id="default-checkbox"
+        :id="props.id"
         type="checkbox"
-        :modelValue="props.modelValue"
         :value="props.value"
-        :label="props.label"
         :disabled="props.disabled"
         :checked="props.checked"
         @change="onChange"
         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <span class="fake"></span>
-    <label for="default-checkbox" class="text ms-2 text-sm"><slot/></label>
+      <span class="text ml-2 text-sm"><slot/></span></label>
   </div>
 </template>
 
 <script setup>
 const props = defineProps({
-  modelValue: String | Number | null,
+  id: String,
   value: String | Boolean,
   label: String | Number | Boolean | Object,
   disabled: Boolean,
@@ -31,7 +30,7 @@ const onChange = (event) => {
 </script>
 
 <style scoped>
-[id=default-checkbox] {
+input {
   display: none;
 }
 .fake {
@@ -55,7 +54,7 @@ const onChange = (event) => {
   opacity: 0;
   transition: .2s;
 }
-[id=default-checkbox]:checked + .fake::before{
+input:checked + .fake::before{
   opacity: 1;
 }
 .text {

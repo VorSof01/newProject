@@ -1,9 +1,9 @@
 <template>
   <button @click="goBack" class="flex row" >
   <icon-arrow/>
-  <div class="text">
+  <span class="text-[#434FBA] text-center text-[14px] font-bold leading-4 ml-[5px]">
     Назад
-  </div>
+  </span>
   </button>
 </template>
 
@@ -19,11 +19,5 @@ const goBack = (): void => {
 </script>
 <style scoped lang="postcss">
 .text {
-  color: #434FBA;
-  text-align: center;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px;
 }
 </style>

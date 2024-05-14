@@ -10,8 +10,5 @@
 </script>
 
 <style scoped>
-.svg{
-  width: 48px;
-  height: 48px;
-}
+svg{}
 </style>

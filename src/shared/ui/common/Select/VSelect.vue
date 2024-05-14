@@ -5,11 +5,19 @@
     class="rounded-[8px] hover:outline-0 focus:outline-0 w-full py-[16px] mt-[16px] px-[17px]"
 >
   <option
+      value=""
+      selected
+      disabled
+      class="text-white"
+  >
+     <slot/>
+  </option>
+  <option
       v-for="option in props.options"
       :key="option.value"
       :value="option.value"
       class="text-black"
-  ><slot name="placeholder"/>
+  >
     {{ option.label }}
   </option>
 </select></form>

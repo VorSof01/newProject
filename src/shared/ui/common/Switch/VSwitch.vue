@@ -1,12 +1,13 @@
 <template>
   <label class="container">
     <input
-        v-model="props.modelValue"
+        :id="props.id"
+        :value="props.value"
         v-bind="$attrs"
         class="input"
         type="checkbox"
         :checked="props.checked"
-        @change="$emit('update:checked', $event.target.checked)"
+        @change="onChange"
     />
     <span class="switch"></span>
     <span class="label">{{ props.label }}</span>
@@ -14,8 +15,14 @@
 </template>
 
 <script setup>
+const emits = defineEmits(['update:model-value'])
+
+const onChange = (event) => {
+  emits('update:model-value', event.target.value)
+}
 const props = defineProps({
-  modelValue: Boolean,
+  id: String,
+  value: String | Boolean,
   label: {
     type: String,
     required: true,

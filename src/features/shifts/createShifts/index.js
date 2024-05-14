@@ -1,1 +1,1 @@
-export { default as ShiftsCreat } from './ShiftsCreat.vue'
+export { default as ShiftsCreate } from './ShiftsCreate.vue'

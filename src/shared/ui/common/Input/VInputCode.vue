@@ -35,6 +35,7 @@ const isDigitsFull = function () {
 import { ref, reactive } from 'vue';
 
 const props = defineProps({
+  id: String,
   default: String,
   modelValue: String | Number | null,
   digitCount: {

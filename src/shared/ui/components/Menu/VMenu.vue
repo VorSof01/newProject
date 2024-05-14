@@ -1,13 +1,9 @@
 <template>
-  <div class="block">
     <button @click.stop="isShowMenu = !isShowMenu">
       <span v-if="!isShowMenu"><IconMenu/></span>
       <span v-else-if="isShowMenu"><IconMenuClose/></span>
     </button>
-    <div>
-      <span v-if="!isShowMenu"><div class="text-1">Меню</div></span>
-      <span v-else-if="isShowMenu"><div class="text">Меню</div></span>
-    </div></div>
+      <span :class="[isShowMenu ? 'text' : 'text-1']">Меню</span>
   <teleport
       to="body"
   >
