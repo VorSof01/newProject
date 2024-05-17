@@ -65,7 +65,11 @@ const submitForm = async () => {
     isAuthError.value = true
     isAuthError1.value = false
   } else if (formData.value.subject !=='' && formData.value.content !==''){
-    console.log(responseData.value)}
+    console.log(responseData.value)
+    formData.value.subject ===''
+    formData.value.content ===''
+    console.log(responseData.value)
+  }
   else{
     isAuthError1.value = true
     isAuthError.value = true
